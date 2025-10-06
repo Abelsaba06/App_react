@@ -1,9 +1,9 @@
 export function TwitterFollow({ username, name, isFollowing }){
   return (
     <article className='md--followcard'>
-      <header className='md--followCard-header'>
-        <img className='md--followCard-avatar'
+      <img className='md--followCard-avatar'
          src={`https://unavatar.io/${username}`} alt=""/>
+      <header className='md--followCard-header'>
         <div className='md--followCard-info'>
         <strong className='md--followCard-info-strong'>{name}</strong>
         <span className='md--followCard-info-span'>@{username}</span>
