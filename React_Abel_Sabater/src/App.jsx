@@ -31,6 +31,7 @@ export function App() {
           let {username,name,isFollowing}=user
           return(
             <TwitterFollow
+            key={username}
             username={username}
             initialIsfollowing={isFollowing}
             >
