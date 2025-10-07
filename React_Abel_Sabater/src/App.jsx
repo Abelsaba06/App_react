@@ -4,16 +4,16 @@ import { TwitterFollow } from './TwitterFollow'
 export function App() {
   return(
     <>
-      <TwitterFollow username="abelsaba06"isFollowing="true">
+      <TwitterFollow username="abelsaba06" >
         Abel Sabater Muñoz
         </TwitterFollow>
-        <TwitterFollow username="midudev"isFollowing="true">
+        <TwitterFollow username="midudev" >
         Miguel Ángel Durán
         </TwitterFollow>
-        <TwitterFollow username="elonmusk"isFollowing="true">
+        <TwitterFollow username="elonmusk" >
         Elon Musk
         </TwitterFollow>
-        <TwitterFollow username="TheRock"isFollowing="true">
+        <TwitterFollow username="TheRock" >
         Dwayne Johnson
         </TwitterFollow>
     </>
