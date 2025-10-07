@@ -1,6 +1,6 @@
 import { useState } from 'react'
-export function TwitterFollow({ username,children}){
-  let [isFollowing, setIsFollowing] = useState(false);
+export function TwitterFollow({ username,children,initialIsfollowing}){
+  let [isFollowing, setIsFollowing] = useState(initialIsfollowing);
   let text= isFollowing ? 'Siguiendo' : 'Seguir';
   let buttonClassName= isFollowing ? "md--followcard-boton is-following": "md--followcard-boton";
   let handleclick= ()=>{
@@ -17,7 +17,10 @@ export function TwitterFollow({ username,children}){
         </div>
       </header>
       <aside className='md--followcard-aside'>
-      <button className={buttonClassName} onClick={handleclick}>{text}</button>
+      <button className={buttonClassName} onClick={handleclick}>
+        <span className="md--followcard-Following">{text}</span>
+        <span className="md--followcard-stopFollow">Dejar de seguir</span>
+        </button>
       </aside>
     </article>
 )

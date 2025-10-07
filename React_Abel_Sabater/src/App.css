@@ -33,14 +33,31 @@
   font-weight: bold;
   transition: .3s ease background-color;
 }
-
-.md--followcard-boton.is-following:hover{
-  border: 1px solid red;
-  background-color:red;
+.md--followcard-stopFollow{
+  display: none;
+  }
+  .md--followcard-Following{
+    display: block;
+    }
+.md--followcard-boton.is-following{
+  border: 1px solid rgb(255, 255, 255);
+  background-color:transparent;
+  color: #fff;
+  width: 140px;
 }
-
+.md--followcard-boton.is-following:hover{
+  border: 1px solid rgb(255, 0, 0);
+  background-color:rgb(255, 0, 0,0.178);
+  color: red;
+}
+.md--followcard-boton.is-following:hover .md--followcard-stopFollow{
+  display: block;
+}
+.md--followcard-boton.is-following:hover .md--followcard-Following{
+  display: none;
+}
 .md--followcard-boton:hover {
-  background-color: aqua;
+  opacity: .8;
   
 }
 
