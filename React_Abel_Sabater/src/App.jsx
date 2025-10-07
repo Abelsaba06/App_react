@@ -1,21 +1,44 @@
 import './App.css'
 import './index.css'
 import { TwitterFollow } from './TwitterFollow'
+let usuarios=[
+  {
+    username: "abelsaba06",
+    name: "Abel Sabater Muñoz",
+    isFollowing: false
+  },
+  {
+    username: "midudev",
+    name: "Miguel Ángel Durán",
+    isFollowing: true
+  },
+  {
+    username: "elonmusk",
+    name: "Elon Musk",
+    isFollowing: false
+  },
+  {
+    username: "TheRock",
+    name: "Dwayne Johnson",
+    isFollowing: false
+  }
+]
 export function App() {
   return(
     <>
-      <TwitterFollow username="abelsaba06" >
-        Abel Sabater Muñoz
-        </TwitterFollow>
-        <TwitterFollow username="midudev" >
-        Miguel Ángel Durán
-        </TwitterFollow>
-        <TwitterFollow username="elonmusk" >
-        Elon Musk
-        </TwitterFollow>
-        <TwitterFollow username="TheRock" >
-        Dwayne Johnson
-        </TwitterFollow>
+      {
+        usuarios.map(user => {
+          let {username,name,isFollowing}=user
+          return(
+            <TwitterFollow
+            username={username}
+            initialIsfollowing={isFollowing}
+            >
+              {name}
+            </TwitterFollow>
+          )
+        })
+      }
     </>
   )
 }
